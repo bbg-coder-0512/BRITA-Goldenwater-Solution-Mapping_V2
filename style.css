@@ -1,0 +1,36 @@
+* { box-sizing: border-box; }
+body { margin: 0; font-family: "Microsoft YaHei", Arial, sans-serif; background: #f5f7fb; color: #1f2937; }
+.page-header { display: flex; justify-content: space-between; gap: 24px; align-items: center; padding: 20px 28px; background: #08284a; color: #fff; }
+.page-header h1 { margin: 0 0 6px 0; font-size: 24px; }
+.page-header p { margin: 0; color: #cbd5e1; }
+.legend { display: flex; flex-wrap: wrap; gap: 14px; font-size: 14px; }
+.legend span { display: inline-flex; align-items: center; gap: 6px; }
+.legend-box { width: 16px; height: 16px; display: inline-block; border-radius: 3px; border: 1px solid rgba(255,255,255,0.4); }
+.purple { background: #b7a4f3; }
+.blue { background: #00b0f0; }
+.yellow { background: #ffff00; }
+.gray { background: #d9d9d9; }
+.layout { display: grid; grid-template-columns: minmax(680px, 1fr) 500px; gap: 20px; padding: 20px; }
+.map-card, .info-card { background: #fff; border-radius: 16px; box-shadow: 0 8px 24px rgba(15,23,42,0.08); overflow: hidden; }
+.toolbar { display: flex; justify-content: space-between; align-items: center; gap: 16px; padding: 14px 18px; border-bottom: 1px solid #e5e7eb; }
+.filters { display: flex; flex-wrap: wrap; gap: 12px; }
+.toolbar label { font-size: 14px; white-space: nowrap; }
+.actions { display: flex; gap: 8px; }
+button { border: none; background: #08284a; color: #fff; border-radius: 8px; padding: 8px 12px; cursor: pointer; white-space: nowrap; }
+button:hover { background: #0b3a6e; }
+#chinaMap { width: 100%; height: calc(100vh - 150px); min-height: 640px; }
+.info-card { padding: 18px; }
+.info-card h2 { margin-top: 0; }
+.kpi-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-bottom: 18px; }
+.kpi { background: #f1f5f9; padding: 14px; border-radius: 12px; }
+.kpi-label { display: block; font-size: 12px; color: #64748b; margin-bottom: 6px; }
+.kpi strong { font-size: 20px; }
+.summary-list { display: grid; gap: 8px; margin-bottom: 18px; }
+.summary-item { display: flex; justify-content: space-between; align-items: center; background: #f8fafc; border-radius: 10px; padding: 10px 12px; border-left: 8px solid #d9d9d9; }
+.table-wrap { max-height: 450px; overflow: auto; border: 1px solid #e5e7eb; border-radius: 10px; }
+table { width: 100%; border-collapse: collapse; font-size: 12px; }
+th, td { padding: 8px; border-bottom: 1px solid #e5e7eb; text-align: left; white-space: nowrap; }
+th { position: sticky; top: 0; background: #08284a; color: #fff; z-index: 1; }
+.color-dot { display:inline-block; width:10px; height:10px; border-radius:2px; margin-right:5px; border:1px solid rgba(0,0,0,0.15); }
+.loading { padding: 24px; color: #64748b; }
+@media (max-width: 1180px) { .layout { grid-template-columns: 1fr; } #chinaMap { height: 620px; } .page-header { flex-direction: column; align-items: flex-start; } }
