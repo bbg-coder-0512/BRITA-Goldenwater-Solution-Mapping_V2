@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>中国水质方案匹配地图</title>
+  <link rel="stylesheet" href="./css/style.css" />
+  <script src="https://cdn.jsdelivr.net/npm/echarts@5/dist/echarts.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/echarts@4.9.0/map/js/china.js"></script>
+  <script src="./data/water-data.js"></script>
+</head>
+<body>
+  <header class="page-header"><div><h1>中国水质方案匹配地图</h1><p>按最终主推方案展示省级主推分布，点击省份查看城市/行政区明细</p></div><div class="legend"><span><i class="legend-box purple"></i>XtraSafe大胖紫</span><span><i class="legend-box blue"></i>Quell ST风味大师</span><span><i class="legend-box yellow"></i>Quell ST+MinUp</span><span><i class="legend-box gray"></i>无数据</span></div></header>
+  <main class="layout"><section class="map-card"><div class="toolbar"><div class="filters"><label><input type="checkbox" class="solution-filter" value="XtraSafe大胖紫" checked /> XtraSafe大胖紫</label><label><input type="checkbox" class="solution-filter" value="Quell ST风味大师" checked /> Quell ST风味大师</label><label><input type="checkbox" class="solution-filter" value="Quell ST+MinUp" checked /> Quell ST+MinUp</label></div><div class="actions"><button id="resetBtn">恢复全国视图</button><button id="downloadBtn">导出当前明细CSV</button></div></div><div id="chinaMap"></div></section><aside class="info-card"><h2 id="panelTitle">全国汇总</h2><div class="kpi-grid"><div class="kpi"><span class="kpi-label">区域记录数</span><strong id="totalCount">-</strong></div><div class="kpi"><span class="kpi-label">主推最多方案</span><strong id="topSolution">-</strong></div></div><h3>主推方案数量</h3><div id="solutionSummary" class="summary-list"></div><h3>明细列表</h3><div class="table-wrap"><table id="detailTable"><thead><tr><th>省份</th><th>城市</th><th>行政区</th><th>GH硬度</th><th>KH碱度</th><th>TDS</th><th>主推方案</th><th>次推方案</th><th>主推依据</th></tr></thead><tbody></tbody></table></div></aside></main>
+  <script src="./js/app.js"></script>
+</body>
+</html>
